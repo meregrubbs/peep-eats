@@ -85,6 +85,9 @@ button:focus {
 .MuiTouchRipple-child {
   background-color: var(--dark-green) !important;
 }
+.MuiTabs-indicator {
+  background-color: var(--dark-green) !important;
+}
 
 /* Category Items */
 .MuiBox-root {

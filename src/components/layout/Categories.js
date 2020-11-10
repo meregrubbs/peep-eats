@@ -19,7 +19,11 @@ function TabPanel(props) {
       aria-labelledby={`scrollable-auto-tab-${index}`}
       {...other}
     >
-      {value === index && <Typography>{children}</Typography>}
+      {value === index && (
+        <Typography component={'div'} variant={'body2'}>
+          {children}
+        </Typography>
+      )}
     </div>
   );
 }

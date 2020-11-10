@@ -13,6 +13,13 @@ const CategoryItems = () => {
             edges {
               node {
                 title
+                recipeMeta {
+                  image {
+                    mediaItemUrl
+                  }
+                  blurb
+                  category
+                }
               }
             }
           }
@@ -21,15 +28,27 @@ const CategoryItems = () => {
     >
       {({ loading, error, data }) => {
         if (loading) {
-          return <h1>Loading...</h1>;
+          return <span>Loading...</span>;
         }
 
         return (
-          <div>
+          <div className='row'>
             {data.recipes.edges.map((recipe, key) => {
-              const title = JSON.stringify(recipe.node.title);
-              console.log(title);
-              return <CategoryItem key={key} title={title} />;
+              // Get variables
+              const title = recipe.node.title;
+              const image = recipe.node.recipeMeta.image.mediaItemUrl;
+              const blurb = recipe.node.recipeMeta.blurb;
+              const category = recipe.node.recipeMeta.category;
+
+              return (
+                <CategoryItem
+                  key={key}
+                  title={title}
+                  image={image}
+                  blurb={blurb}
+                  category={category}
+                />
+              );
             })}
           </div>
         );

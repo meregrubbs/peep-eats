@@ -5,7 +5,7 @@ import Hero1800 from '../../images/hero/peep-eats-hero-1800.png';
 
 const Hero = () => {
   return (
-    <Parallax blur={0} bgImage={Hero1800} strength={200}>
+    <Parallax blur={0} bgImage={Hero1800} strength={300}>
       <div className='hero'></div>
     </Parallax>
   );

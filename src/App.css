@@ -99,15 +99,10 @@ button:focus {
   margin: 1em 0;
 }
 .category-img {
-  height: 10em;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
   margin-bottom: 0.5em;
-}
-.category-img img {
-  max-width: 100%;
 }
 .category {
   color: var(--dark-green);

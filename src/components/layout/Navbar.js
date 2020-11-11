@@ -1,5 +1,7 @@
 import React from 'react';
+
 import logo from '../../images/peep-eats-logo.svg';
+
 import Searchbar from './Searchbar';
 
 const Navbar = () => {

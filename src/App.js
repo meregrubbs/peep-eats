@@ -4,7 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 
 import Navbar from './components/layout/Navbar';
 import Hero from './components/layout/Hero';
-import Categories from './components/layout/Categories';
+import ScrollableTabs from './components/layout/ScrollableTabs';
 
 const client = new ApolloClient({
   uri: 'https://peepeats.website/graphql'
@@ -15,7 +15,7 @@ function App() {
     <ApolloProvider client={client}>
       <Navbar />
       <Hero />
-      <Categories />
+      <ScrollableTabs />
     </ApolloProvider>
   );
 }

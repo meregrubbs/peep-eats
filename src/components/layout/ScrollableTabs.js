@@ -1,12 +1,14 @@
 import React from 'react';
-import CategoryItems from './CategoryItems';
-
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+
+// Material UI Tab Imports
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+
+import CategoryItems from './CategoryItems';
+import CategoryTabs from './CategoryTabs';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,13 +36,6 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`
-  };
-}
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -67,12 +62,7 @@ export default function ScrollableTabsButtonAuto() {
           aria-label='scrollable auto tabs'
           className='container'
         >
-          <Tab label='all recipes' {...a11yProps(0)} />
-          <Tab label='Item Two' {...a11yProps(1)} />
-          <Tab label='Item Three' {...a11yProps(2)} />
-          <Tab label='Item Four' {...a11yProps(3)} />
-          <Tab label='Item Five' {...a11yProps(4)} />
-          <Tab label='Item Six' {...a11yProps(5)} />
+          <CategoryTabs />
         </Tabs>
       </AppBar>
 
